@@ -7,3 +7,4 @@ Author-> firstName(String), lastName(String)
 Book-> title(String), isbn(String)
 
 [x] POJO-> Plain Old Java Objects, Implement them in model package, JPA requires an empty/no-args constructor too
+[x] JPA Id's -> Make them into JPA "Entities"

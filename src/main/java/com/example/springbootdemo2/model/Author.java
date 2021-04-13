@@ -1,9 +1,6 @@
 package com.example.springbootdemo2.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Set;
 
 @Entity
@@ -15,6 +12,8 @@ public class Author {
 
     private String firstName;
     private String lastName;
+
+    @ManyToMany(mappedBy = "authors") // authors property we have in Book.java
     private Set<Book> books;
 
     public Author() {

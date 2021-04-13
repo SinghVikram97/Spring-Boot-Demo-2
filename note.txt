@@ -14,3 +14,5 @@ Book-> title(String), isbn(String)
 [x] To String
 
 [x] Spring Data Repositories -> To interact with database, taking care of hibernate, transactional command, jdbc code provides abstraction
+
+[x] Initialize some data to work with-> Command Line Runner, which Spring runs when it finds one

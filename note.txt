@@ -9,5 +9,8 @@ Book-> title(String), isbn(String)
 [x] POJO-> Plain Old Java Objects, Implement them in model package, JPA requires an empty/no-args constructor too
 [x] JPA Id's -> Make them into JPA "Entities"
 [x] JPA Relationships -> Many to many relationship b/w authors and books
+
 [x] Equals & Hash Code -> Implement equality based on id assigned by database
 [x] To String
+
+[x] Spring Data Repositories -> To interact with database, taking care of hibernate, transactional command, jdbc code provides abstraction

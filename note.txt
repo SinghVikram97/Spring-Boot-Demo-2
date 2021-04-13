@@ -46,3 +46,5 @@ Client    ------> Dispatcher     -----------> Controller ---------- Service(Get 
 [x] Configuring Controller -> Map a particular controller to a path, when spring gets a request on a particular path that controller is called
 [x] Annotate Controller Class with @Controller, this will register the class as a spring bean and as a controller in spring mvc
 [x] To maps methods to http request paths use @RequestMapping
+
+[x] Implementing View- We use Thymeleaf , Java template engine

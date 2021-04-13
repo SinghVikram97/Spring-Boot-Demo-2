@@ -27,14 +27,20 @@ public class BootStrapData implements CommandLineRunner {
     public void run(String... args) throws Exception {
         Author eric=new Author("Eric","Evans");
         Book ddd=new Book("Domain Driven Design","123123");
+        Publisher publisher=new Publisher("SFG Publishing","St Petersburg","FL","USA","110065");
+        publisherRepository.save(publisher);
 
         // Assign books to author and vice versa
         eric.getBooks().add(ddd);
         ddd.getAuthors().add(eric);
 
+        ddd.setPublisher(publisher);
+        publisher.getBooks().add(ddd);
+
         // Save them to h2 database
         authorRepository.save(eric);
         bookRepository.save(ddd);
+        publisherRepository.save(publisher);
 
         Author rod=new Author("Rod","Johnson");
         Book noEJB=new Book("J2EE Development without EJB","39346464");
@@ -42,11 +48,15 @@ public class BootStrapData implements CommandLineRunner {
         rod.getBooks().add(noEJB);
         noEJB.getAuthors().add(rod);
 
+        noEJB.setPublisher(publisher);
+        publisher.getBooks().add(noEJB);
+
         authorRepository.save(rod);
         bookRepository.save(noEJB);
+        publisherRepository.save(publisher);  // Again save but publisher count will be as they are same publisher
+        // We implemented equals in publisher which checks on publisher id
 
-        Publisher publisher=new Publisher("SFG Publishing","St Petersburg","FL","USA","110065");
-        publisherRepository.save(publisher);
+
 
         System.out.println("Started in Bootstrap");
         System.out.println("Number of Books: "+bookRepository.count());

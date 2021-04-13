@@ -17,4 +17,5 @@ Book-> title(String), isbn(String)
 
 [x] Initialize some data to work with-> Command Line Runner, which Spring runs when it finds one
 
-[x]
+[x] Add Publisher Entity
+[x] JPA Relationships- A Publisher can publish many books but a book will have only a single publisher, one to many

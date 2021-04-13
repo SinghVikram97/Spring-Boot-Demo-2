@@ -23,12 +23,24 @@ public class Book {
     )
     private Set<Author> authors=new HashSet<>();
 
+    // Many books but one publisher possible
+    @ManyToOne
+    private Publisher publisher;
+
     public Book() {
     }
 
     public Book(String title, String isbn) {
         this.title = title;
         this.isbn = isbn;
+    }
+
+    public Publisher getPublisher() {
+        return publisher;
+    }
+
+    public void setPublisher(Publisher publisher) {
+        this.publisher = publisher;
     }
 
     public Long getId() {

@@ -19,3 +19,5 @@ Book-> title(String), isbn(String)
 
 [x] Add Publisher Entity
 [x] JPA Relationships- A Publisher can publish many books but a book will have only a single publisher, one to many
+
+[x] h2 console enable- localhost:8080/h2-console and take jdbc url from console log which has Database available at 'jdbc:h2:mem:5f0e553c-519d-4092-bc38-7f3b44daa8a1'
